@@ -1,3 +1,5 @@
+cargo-features = ["named-profiles"]
+
 [package]
 name = "wasmer-bin"
 version = "0.16.2"
@@ -133,7 +135,7 @@ name = "callback"
 crate-type = ["bin"]
 required-features = ["backend-cranelift"]
 
-[profile.custom.release-capi]
+[profile.release-capi]
 inherits = "release"
 lto = true
 incremental = false
