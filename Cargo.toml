@@ -132,3 +132,8 @@ crate-type = ["bin"]
 name = "callback"
 crate-type = ["bin"]
 required-features = ["backend-cranelift"]
+
+[profile.custom.release-capi]
+inherits = "release"
+lto = true
+incremental = false
