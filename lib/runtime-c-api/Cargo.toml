@@ -12,10 +12,12 @@ edition = "2018"
 readme = "README.md"
 
 [lib]
-crate-type = ["cdylib", "rlib", "staticlib"]
+crate-type = ["cdylib", "staticlib"]
 
 [dependencies]
 libc = "0.2.60"
+# for generating code in the same way thot the wasm-c-api does
+wasmer-wasm-c-api = { version = "0.16.2", path = "crates/wasm-c-api" }
 
 [dependencies.wasmer]
 default-features = false
@@ -45,6 +47,8 @@ cranelift-backend = ["wasmer/cranelift", "wasmer/default-backend-cranelift"]
 llvm-backend = ["wasmer/llvm", "wasmer/default-backend-llvm"]
 wasi = ["wasmer-wasi"]
 emscripten = ["wasmer-emscripten"]
+# used to avoid generating standard Wasm C API types in our header files
+ignore-wasm-c-api = []
 
 [build-dependencies]
-cbindgen = "0.9"
+cbindgen = "0.14"

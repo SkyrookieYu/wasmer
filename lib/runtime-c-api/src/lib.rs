@@ -90,6 +90,8 @@
     unused_unsafe,
     unreachable_patterns
 )]
+extern crate wasmer_wasm_c_api;
+pub use wasmer_wasm_c_api::*;
 
 pub mod error;
 pub mod export;
