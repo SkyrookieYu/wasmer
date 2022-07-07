@@ -18,7 +18,7 @@ wasmer-compiler = { path = "../compiler", version = "=2.3.0", features = [
 wasmer-vm = { path = "../vm", version = "=2.3.0" }
 wasmer-types = { path = "../types", version = "=2.3.0" }
 target-lexicon = { version = "0.12.2", default-features = false }
-smallvec = "1.6"
+smallvec = "1.9"
 object = { version = "0.28.3", default-features = false, features = ["read"] }
 libc = { version = "^0.2", default-features = false }
 byteorder = "1"
